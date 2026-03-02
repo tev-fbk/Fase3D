@@ -71,9 +71,9 @@
             </div>
 
             <div class="is-size-5 publication-authors" style="margin-top: 10px;">
-              <span class="author-block"><sup>1</sup>Fondazione Bruno Kessler (FBK),</span>
-              <span class="author-block"><sup>2</sup>Institution 2,</span>
-              <span class="author-block"><sup>3</sup>Institution 3</span>
+              <span class="author-block"><sup>1</sup>Fondazione Bruno Kessler, Italy,</span>
+              <span class="author-block"><sup>2</sup>JKU Linz, Austria,</span>
+              <span class="author-block"><sup>3</sup>CSIRO, Australia</span>
             </div>
 
             <div class="is-size-4 publication-authors" style="margin-top: 15px; font-weight: bold;">
@@ -95,7 +95,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/YOUR_REPO_HERE" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/gfmei/fase3d" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
@@ -130,7 +130,7 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/teaser_architecture.png" alt="Fase3D Architecture Teaser" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="static/images/teaser.png" alt="Fase3D Architecture" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
         <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
           <strong>Fase3D</strong> is an encoder-free Fourier-based 3D scene Large Multimodal Model that effectively tokenizes unordered 3D data, bypassing heavy visual encoders while maintaining state-of-the-art performance.
         </h2>
@@ -195,7 +195,7 @@
         <div class="column is-full-width">
           <h2 class="title is-3 has-text-centered">Architecture</h2>
           <div class="content has-text-justified mt-5">
-            <img src="static/images/methodology_diagram.png" alt="Detailed architecture of Fase3D" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+            <img src="static/images/architecture.png" alt="Detailed architecture of Fase3D" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
             <p>
               Unlike traditional pipelines requiring PointNet++ or Sparse Convolutions, Fase3D directly processes geometric features. The architecture serializes spatial coordinates, passes them through a continuous Fourier transform layer, and dynamically fuses them with textual inputs. This guarantees both permutation invariance and linear scaling with respect to the number of input points.
             </p>
