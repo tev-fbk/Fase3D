@@ -2,334 +2,257 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNN7F7HDFD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-JNN7F7HDFD');
   </script>
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+
+  <meta name="description" content="Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model">
+  <meta property="og:title" content="Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model"/>
+  <meta property="og:description" content="The first efficient encoder-free Fourier-based 3D scene Large Multimodal Model (CVPR 2026)."/>
+  <meta property="og:url" content="https://your-website-url.github.io"/>
+  <meta property="og:image" content="static/images/banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:title" content="Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model">
+  <meta name="twitter:description" content="A novel encoder-free LMM for 3D point clouds using FFT (CVPR 2026).">
+  <meta name="twitter:image" content="static/images/twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+
+  <meta name="keywords" content="3D Large Multimodal Models, LMM, Point Clouds, Fast Fourier Transform, Fase3D, Encoder-Free, CVPR 2026">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>Academic Project Page</title>
+  <title>Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
-  >
-  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    /* Custom styling inspired by RoverBench */
+    .feature-icon { font-size: 2.5rem; color: #3273dc; margin-bottom: 15px; }
+    .news-box { max-height: 150px; overflow-y: auto; background-color: #f5f5f5; border-left: 4px solid #3273dc; }
+    .title-highlight { color: #3273dc; }
+  </style>
 </head>
 <body>
-
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <div class="columns">
-          <div class="column is-three-fifths is-flex is-flex-wrap-wrap">
-                <img src="static/images/logo_fbk.png" style="height: 100px;" alt="MY ALT TEXT"/>
-                <img src="static/images/logo_TEV.png" style="height: 100px;" alt="MY ALT TEXT"/>
-          </div>
-          <div class="column is-flex is-flex-direction-row-reverse is-flex-wrap-wrap">
-            <img src="static/images/logo_CVPR_Blue.svg" style="height: 100px;" alt="MY ALT TEXT"/>
-              </div>
-        </div>
         <div class="columns is-centered">
-
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+            <h1 class="title is-1 publication-title">
+              <span class="title-highlight">Fase3D:</span> Efficient Encoder-Free Fourier-based 3D Large Multimodal Model
+            </h1>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors" style="margin-top: 20px;">
+              <span class="author-block"><a href="#" target="_blank">Guofeng Mei</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#" target="_blank">Wei Lin</a><sup>2</sup>,</span>
+              <span class="author-block"><a href="#" target="_blank">Luigi Riz</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#" target="_blank">Yujiao Wu</a><sup>3</sup>,</span><br>
+              <span class="author-block"><a href="#" target="_blank">Yiming Wang</a><sup>1</sup>,</span>
+              <span class="author-block"><a href="#" target="_blank">Fabio Poiesi</a><sup>1</sup></span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+            <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+              <span class="author-block"><sup>1</sup>Fondazione Bruno Kessler (FBK),</span>
+              <span class="author-block"><sup>2</sup>Institution 2,</span>
+              <span class="author-block"><sup>3</sup>Institution 3</span>
+            </div>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+            <div class="is-size-4 publication-authors" style="margin-top: 15px; font-weight: bold;">
+              <span class="author-block">CVPR 2026</span>
+            </div>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+            <div class="column has-text-centered" style="margin-top: 15px;">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2602.23153.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2602.23153" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/YOUR_REPO_HERE" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fa-solid fa-database"></i></span>
+                    <span>Models</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
+  <section class="section pt-0">
+    <div class="container is-max-desktop">
+      <div class="box news-box">
+        <h5 class="title is-5 mb-2"><i class="fas fa-bullhorn"></i> Latest News</h5>
+        <ul style="list-style-type: none; margin: 0; padding: 0;">
+          <li><span class="tag is-info is-light mr-2">Feb 2026</span> Fase3D is accepted to <strong>CVPR 2026</strong>! 🎉</li>
+          <li><span class="tag is-info is-light mr-2">Feb 2026</span> Preprint is available on arXiv.</li>
+          <li><span class="tag is-info is-light mr-2">Upcoming</span> Code and model weights will be released soon.</li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser_architecture.png" alt="Fase3D Architecture Teaser" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+          <strong>Fase3D</strong> is an encoder-free Fourier-based 3D scene Large Multimodal Model that effectively tokenizes unordered 3D data, bypassing heavy visual encoders while maintaining state-of-the-art performance.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Large Multimodal Models (LMMs) processing 3D data typically rely on heavy, pre-trained visual encoders. While recent 2D LMMs eliminate such encoders for efficiency, extending this to 3D remains challenging due to the unordered and large-scale nature of point clouds. We propose <strong>Fase3D</strong>, the first efficient encoder-free Fourier-based 3D scene LMM.
+            </p>
+            <p>
+              Fase3D leverages a novel tokenizer combining point cloud serialization and the Fast Fourier Transform (FFT) to approximate self-attention. This design enables scalable global context modeling and graph-based token merging. Coupled with lightweight Fourier-augmented LoRA adapters, Fase3D injects global frequency-aware interactions into the LLM at negligible computational cost.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Key Innovations</h2>
+      <div class="columns is-multiline is-centered mt-4">
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+        <div class="column is-one-third has-text-centered">
+          <div class="box" style="height: 100%;">
+            <i class="fa-solid fa-compress feature-icon"></i>
+            <h3 class="title is-5">Structured Superpoints</h3>
+            <p class="is-size-6">Massive 3D point clouds are grouped into compact superpoints, drastically reducing token counts while preserving crucial geometry.</p>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
+
+        <div class="column is-one-third has-text-centered">
+          <div class="box" style="height: 100%;">
+            <i class="fa-solid fa-wave-square feature-icon"></i>
+            <h3 class="title is-5">FFT & Serialization</h3>
+            <p class="is-size-6">Unordered 3D data is serialized via a space-filling curve. Fast Fourier Transform (FFT) efficiently models global context without quadratic self-attention costs.</p>
+          </div>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+
+        <div class="column is-one-third has-text-centered">
+          <div class="box" style="height: 100%;">
+            <i class="fa-solid fa-microchip feature-icon"></i>
+            <h3 class="title is-5">Fourier-Augmented LoRA</h3>
+            <p class="is-size-6">Lightweight adapters inject global frequency-aware interactions directly into the pre-trained LLM at almost zero extra computational cost.</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered">Architecture</h2>
+          <div class="content has-text-justified mt-5">
+            <img src="static/images/methodology_diagram.png" alt="Detailed architecture of Fase3D" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+            <p>
+              Unlike traditional pipelines requiring PointNet++ or Sparse Convolutions, Fase3D directly processes geometric features. The architecture serializes spatial coordinates, passes them through a continuous Fourier transform layer, and dynamically fuses them with textual inputs. This guarantees both permutation invariance and linear scaling with respect to the number of input points.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+      <p class="has-text-centered mb-5">Fase3D demonstrates strong capabilities in 3D Scene QA, Dense Captioning, and Spatial Reasoning.</p>
 
-    <!-- End of Statcounter Code -->
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <figure class="image">
+            <img src="static/images/result1.png" alt="Scene Understanding" style="border-radius: 8px;">
+          </figure>
+          <p class="has-text-centered mt-2 is-italic">3D Scene QA Performance</p>
+        </div>
+        <div class="column is-half">
+          <figure class="image">
+            <img src="static/images/result2.png" alt="Token Merging" style="border-radius: 8px;">
+          </figure>
+          <p class="has-text-centered mt-2 is-italic">FFT-based Token Merging</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </body>
-  </html>
+  <section class="section hero is-light" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-4">Citation</h2>
+      <pre><code>@inproceedings{mei2026fase3d,
+  title={Efficient Encoder-Free Fourier-based 3D Large Multimodal Model},
+  author={Mei, Guofeng and Lin, Wei and Riz, Luigi and Wu, Yujiao and Wang, Yiming and Poiesi, Fabio},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br>
+              Design heavily inspired by <a href="https://roverbench.github.io/" target="_blank">RoverBench</a> and <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

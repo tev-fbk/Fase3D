@@ -1,43 +1,41 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model
 
-## FBK Style guide
-guide: http://www.fbk.eu/wp-content/uploads/2020/07/Linee-Guida-Kit.pdf
+[![arXiv](https://img.shields.io/badge/arXiv-2602.23153-b31b1b.svg)](https://arxiv.org/abs/2602.23153)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://your-website-url.github.io)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-BLUE: #0068b4
-GRAY: #a5a5a5
+This is the official code and website repository for the paper **"Efficient Encoder-Free Fourier-based 3D Large Multimodal Model"** (CVPR 2026).
 
 
-## Start using the template
-To start using the template click on `Use this Template`.
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+## 📢 News
+* **[Feb 2026]** Fase3D has been accepted to **CVPR 2026**! 🎉
+* **[Feb 2026]** The [preprint](https://arxiv.org/abs/2602.23153) is now available on arXiv.
+* **[Upcoming]** Training code, evaluation scripts, and pre-trained model weights will be released here soon.
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+## 🚀 Overview
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+Large Multimodal Models (LMMs) that process 3D data typically rely on heavy, pre-trained visual encoders. **Fase3D** is the first efficient encoder-free Fourier-based 3D scene LMM. 
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://horwitz.ai](https://horwitz.ai)
+By combining structured superpoints, space-filling curve serialization, and the Fast Fourier Transform (FFT), Fase3D effectively tokenizes unordered 3D data and completely bypasses traditional 3D encoders. Coupled with Fourier-augmented LoRA adapters, our model injects global frequency-aware interactions directly into the LLM with negligible computational cost, achieving state-of-the-art performance in 3D Scene QA and understanding.
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+## 💻 Code & Models (Coming Soon)
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+Instructions for environment setup, training, and inference will be provided in this section upon the official code release.
+
+```bash
+# Placeholder for future installation commands
+git clone [https://github.com/YOUR_ORG/Fase3D.git](https://github.com/YOUR_ORG/Fase3D.git)
+cd Fase3D
+pip install -r requirements.txt
+```
+
+
+```bash
+@inproceedings{mei2026fase3d,
+  title={Efficient Encoder-Free Fourier-based 3D Large Multimodal Model},
+  author={Mei, Guofeng and Lin, Wei and Riz, Luigi and Wu, Yujiao and Wang, Yiming and Poiesi, Fabio},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}
+```
