@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JNN7F7HDFD"></script>
@@ -10,15 +10,15 @@
     gtag('config', 'G-JNN7F7HDFD');
   </script>
 
-  <meta name="description" content="Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model">
-  <meta property="og:title" content="Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model"/>
+  <meta name="description" content="Efficient Encoder-Free Fourier-based 3D Large Multimodal Model">
+  <meta property="og:title" content="Efficient Encoder-Free Fourier-based 3D Large Multimodal Model"/>
   <meta property="og:description" content="The first efficient encoder-free Fourier-based 3D scene Large Multimodal Model (CVPR 2026)."/>
   <meta property="og:url" content="https://your-website-url.github.io"/>
   <meta property="og:image" content="static/images/banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-  <meta name="twitter:title" content="Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model">
+  <meta name="twitter:title" content="Efficient Encoder-Free Fourier-based 3D Large Multimodal Model">
   <meta name="twitter:description" content="A novel encoder-free LMM for 3D point clouds using FFT (CVPR 2026).">
   <meta name="twitter:image" content="static/images/twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,7 @@
   <meta name="keywords" content="3D Large Multimodal Models, LMM, Point Clouds, Fast Fourier Transform, Fase3D, Encoder-Free, CVPR 2026">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Fase3D: Efficient Encoder-Free Fourier-based 3D Large Multimodal Model</title>
+  <title>Efficient Encoder-Free Fourier-based 3D Large Multimodal Model</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -57,8 +57,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
+<!--            <h1 class="title is-1 publication-title">-->
+<!--              <span class="title-highlight">Fase3D:</span> Efficient Encoder-Free Fourier-based 3D Large Multimodal Model-->
+<!--            </h1>-->
+
             <h1 class="title is-1 publication-title">
-              <span class="title-highlight">Fase3D:</span> Efficient Encoder-Free Fourier-based 3D Large Multimodal Model
+              <img
+                src="static/images/logo_fase.png"
+                alt="Fase3D"
+                style="height: 1.1em; margin-right: 2px;"
+              >
+              Efficient Encoder-Free Fourier-based 3D Large Multimodal Model
             </h1>
 
             <div class="is-size-5 publication-authors" style="margin-top: 20px;">
@@ -88,12 +97,12 @@
                     <span>Paper</span>
                   </a>
                 </span>
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2602.23153" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="ai ai-arxiv"></i></span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
+<!--                <span class="link-block">-->
+<!--                  <a href="https://arxiv.org/abs/2602.23153" target="_blank" class="external-link button is-normal is-rounded is-dark">-->
+<!--                    <span class="icon"><i class="ai ai-arxiv"></i></span>-->
+<!--                    <span>arXiv</span>-->
+<!--                  </a>-->
+<!--                </span>-->
                 <span class="link-block">
                   <a href="https://github.com/gfmei/fase3d" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fab fa-github"></i></span>
@@ -104,6 +113,14 @@
                   <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fa-solid fa-database"></i></span>
                     <span>Models</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset</span>
                   </a>
                 </span>
               </div>
@@ -139,11 +156,12 @@
             <div class="content">
 <!--              <h2 class="title is-4 mb-3">Breaking the Encoder Bottleneck</h2>-->
               <p class="has-text-justified is-size-5">
-                Mainstream 3D LMMs rely on computationally heavy scene encoders to extract geometric features.
+                Most 3D large multimodal models (LMMs) rely on computationally heavy scene encoders to extract geometric features.
                 <strong>Fase3D</strong> eliminates this redundancy.
   <!--            </p>-->
   <!--            <p class="has-text-justified is-size-5">-->
-                By employing a lightweight <strong>Fourier-based tokenizer</strong> and <strong>Fourier-augmented LoRA adapters</strong>, Fase3D processes raw point clouds directly. This allows us to bypass visual encoders entirely, infusing global frequency-aware context into the LLM with negligible overhead while maintaining state-of-the-art performance.
+                By employing a lightweight <strong>Fourier-based tokenizer</strong> and <strong>Fourier-augmented LoRA adapters</strong>, Fase3D processes raw point clouds directly.
+                This allows us to bypass visual encoders entirely, infusing global frequency-aware context into the LLM with negligible overhead while maintaining state-of-the-art performance.
               </p>
             </div>
           </div>
@@ -169,36 +187,52 @@
       </div>
     </div>
   </section>
-
+  
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Key Innovations</h2>
-      <div class="columns is-multiline is-centered mt-4">
-
-        <div class="column is-one-third has-text-centered">
-          <div class="box" style="height: 100%;">
-            <i class="fa-solid fa-compress feature-icon"></i>
+  
+      <div class="columns is-centered is-multiline mt-4">
+  
+        <div class="column is-one-third">
+          <div class="box has-text-centered" style="height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2rem;">
+            <div style="width: 64px; height: 64px; background: #eff5fb; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <i class="fa-solid fa-cubes" style="font-size: 28px; color: #0068b4;"></i>
+            </div>
+  
             <h3 class="title is-5">Structured Superpoints</h3>
-            <p class="is-size-6">Massive 3D point clouds are grouped into compact superpoints, drastically reducing token counts while preserving crucial geometry.</p>
+            <p class="content is-size-6">
+              We group massive 3D point clouds into compact <strong>superpoint tokens</strong>. This drastically reduces sequence length while preserving crucial geometric details.
+            </p>
           </div>
         </div>
-
-        <div class="column is-one-third has-text-centered">
-          <div class="box" style="height: 100%;">
-            <i class="fa-solid fa-wave-square feature-icon"></i>
+  
+        <div class="column is-one-third">
+          <div class="box has-text-centered" style="height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2rem;">
+            <div style="width: 64px; height: 64px; background: #eff5fb; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <i class="fa-solid fa-wave-square" style="font-size: 28px; color: #0068b4;"></i>
+            </div>
+  
             <h3 class="title is-5">FFT & Serialization</h3>
-            <p class="is-size-6">Unordered 3D data is serialized via a space-filling curve. Fast Fourier Transform (FFT) efficiently models global context without quadratic self-attention costs.</p>
+            <p class="content is-size-6">
+              Unordered points are serialized via a <strong>space-filling curve</strong>. We then use the <strong>Fast Fourier Transform (FFT)</strong> to model global context efficiently, avoiding quadratic self-attention costs.
+            </p>
           </div>
         </div>
-
-        <div class="column is-one-third has-text-centered">
-          <div class="box" style="height: 100%;">
-            <i class="fa-solid fa-microchip feature-icon"></i>
+  
+        <div class="column is-one-third">
+          <div class="box has-text-centered" style="height: 100%; display: flex; flex-direction: column; align-items: center; padding: 2rem;">
+            <div style="width: 64px; height: 64px; background: #eff5fb; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+              <i class="fa-solid fa-layer-group" style="font-size: 28px; color: #0068b4;"></i>
+            </div>
+  
             <h3 class="title is-5">Fourier-Augmented LoRA</h3>
-            <p class="is-size-6">Lightweight adapters inject global frequency-aware interactions directly into the pre-trained LLM at almost zero extra computational cost.</p>
+            <p class="content is-size-6">
+              Lightweight adapters inject <strong>global frequency-aware interactions</strong> directly into the pre-trained LLM, enhancing vision context at <strong>negligible computational cost</strong>.
+            </p>
           </div>
         </div>
-
+  
       </div>
     </div>
   </section>
@@ -234,38 +268,85 @@
   </section>
 
   <section class="section">
-    <div class="container is-max-desktop">
+    <div class="container is-widescreen">
       <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
-      <p class="has-text-centered mb-5">Fase3D demonstrates strong capabilities in 3D Scene QA, Dense Captioning, and Spatial Reasoning.</p>
+      <p class="has-text-centered mb-6" style="font-size: 1.2rem;">
+        Fase3D demonstrates strong capabilities in 3D Scene QA and Dense Captioning.
+      </p>
 
-      <div class="columns is-multiline">
-        <div class="column is-half">
-          <figure class="image">
-            <img src="static/images/result1.png" alt="Question Answering" style="border-radius: 8px;">
+      <div class="columns is-centered is-multiline">
+
+        <div class="column is-10">
+          <figure class="image mb-4">
+            <img src="static/images/result1.png" alt="Question Answering" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           </figure>
-          <p class="has-text-centered mt-2 is-italic">3D Scene QA Performance</p>
+          <p class="has-text-centered is-size-5 has-text-weight-medium mb-6">
+            3D Scene QA Performance
+          </p>
         </div>
-        <div class="column is-half">
-          <figure class="image">
-            <img src="static/images/result2.png" alt="Dense Captioning" style="border-radius: 8px;">
+
+        <div class="column is-10">
+          <figure class="image mb-4">
+            <img src="static/images/result2.png" alt="Dense Captioning" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           </figure>
-          <p class="has-text-centered mt-2 is-italic">3D Scene Dense Captioning Performance</p>
+          <p class="has-text-centered is-size-5 has-text-weight-medium">
+            3D Scene Dense Captioning Performance
+          </p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="section hero is-light" id="BibTeX">
+    <section class="section hero is-light" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title is-4">Citation</h2>
-      <pre><code>@inproceedings{mei2026fase3d,
-  title={Efficient Encoder-Free Fourier-based 3D Large Multimodal Model},
-  author={Mei, Guofeng and Lin, Wei and Riz, Luigi and Wu, Yujiao and Wang, Yiming and Poiesi, Fabio},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2026}
-}</code></pre>
+      <h2 class="title is-3 has-text-centered">Citation</h2>
+
+      <div class="box" style="position: relative;">
+
+        <button
+          class="button is-small is-dark is-outlined"
+          onclick="copyBibtex()"
+          style="position: absolute; top: 10px; right: 10px; z-index: 10;">
+          <span class="icon is-small">
+            <i class="fas fa-copy"></i>
+          </span>
+          <span id="copy-text">Copy</span>
+        </button>
+
+        <pre id="bibtex-code" style="padding-top: 40px; border-radius: 5px;"><code>@inproceedings{mei2026fase3d,
+    title={Efficient Encoder-Free Fourier-based 3D Large Multimodal Model},
+    author={Mei, Guofeng and Lin, Wei and Riz, Luigi and Wu, Yujiao and Wang, Yiming and Poiesi, Fabio},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2026}
+  }</code></pre>
+      </div>
+
     </div>
   </section>
+
+  <script>
+    function copyBibtex() {
+      // Get the text field
+      var copyText = document.getElementById("bibtex-code").innerText;
+
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText).then(() => {
+        // Change button text to "Copied!" for feedback
+        var copyButtonText = document.getElementById("copy-text");
+        var originalText = copyButtonText.innerText;
+
+        copyButtonText.innerText = "Copied!";
+
+        // Revert back after 2 seconds
+        setTimeout(function() {
+          copyButtonText.innerText = originalText;
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+  </script>
 
   <footer class="footer">
     <div class="container">
