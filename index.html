@@ -254,9 +254,7 @@
               A graph is then constructed, and a token-merging block (<span style="color: #C1E5F5; font-size: 1.2em;">●</span>) compresses them into <em>T</em> compact 3D tokens (where <em>T &lt; M</em>).
               Finally, an LLM (<span style="color: #DBC4F0; font-size: 1.2em;">●</span>) equipped with an FFT-based global filter (<span style="color: #FBE3D6; font-size: 1.2em;">●</span>) processes these tokens alongside textual and user prompts.
             </p>
-
-            <hr style="margin: 1.5rem 0;">
-
+<!--            <hr style="margin: 1.5rem 0;">-->
             <p>
               <strong>Why it works:</strong> Unlike traditional pipelines requiring heavy encoders like PointNet++ or Sparse Convolutions, <strong>Fase3D</strong> directly processes geometric features. By serializing spatial coordinates and passing them through a continuous Fourier transform layer, we dynamically fuse geometry with textual inputs. This design guarantees both <em>permutation invariance</em> and <em>linear scaling</em> with respect to the number of input points.
             </p>
