@@ -130,10 +130,24 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <img src="static/images/teaser.png" alt="Fase3D Architecture" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
-          <strong>Fase3D</strong> is an encoder-free Fourier-based 3D scene Large Multimodal Model that effectively tokenizes unordered 3D data, bypassing heavy visual encoders while maintaining state-of-the-art performance.
-        </h2>
+        <div class="columns is-vcentered">
+          <div class="column is-6">
+            <img src="static/images/teaser.png" alt="Fase3D teaser" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          </div>
+
+          <div class="column is-6">
+            <div class="content">
+<!--              <h2 class="title is-4 mb-3">Breaking the Encoder Bottleneck</h2>-->
+              <p class="has-text-justified is-size-5">
+                Mainstream 3D LMMs rely on computationally heavy scene encoders to extract geometric features.
+                <strong>Fase3D</strong> eliminates this redundancy.
+  <!--            </p>-->
+  <!--            <p class="has-text-justified is-size-5">-->
+                By employing a lightweight <strong>Fourier-based tokenizer</strong> and <strong>Fourier-augmented LoRA adapters</strong>, Fase3D processes raw point clouds directly. This allows us to bypass visual encoders entirely, infusing global frequency-aware context into the LLM with negligible overhead while maintaining state-of-the-art performance.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -192,14 +206,28 @@
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
-        <div class="column is-full-width">
+        <div class="column is-four-fifths">
           <h2 class="title is-3 has-text-centered">Architecture</h2>
-          <div class="content has-text-justified mt-5">
-            <img src="static/images/architecture.png" alt="Detailed architecture of Fase3D" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 20px;">
+
+          <figure class="image is-fullwidth mb-5">
+            <img src="static/images/architecture.png" alt="Detailed architecture of Fase3D" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          </figure>
+
+          <div class="content has-text-justified">
+            <p class="is-size-6">
+              <strong>Pipeline Overview:</strong>
+              A lightweight tokenizer (<span style="color: #3298dc; font-size: 1.2em;">●</span>) produces <em>M</em> superpoint tokens, which are refined by an FFT-based context enhancer (<span style="color: #2ecc71; font-size: 1.2em;">●</span>).
+              A graph is then constructed, and a token-merging block (<span style="color: #e67e22; font-size: 1.2em;">●</span>) compresses them into <em>T</em> compact 3D tokens (where <em>T &lt; M</em>).
+              Finally, an LLM (<span style="color: #9b59b6; font-size: 1.2em;">●</span>) equipped with an FFT-based global filter (<span style="color: #e74c3c; font-size: 1.2em;">●</span>) processes these tokens alongside textual and user prompts.
+            </p>
+
+            <hr style="margin: 1.5rem 0;">
+
             <p>
-              Unlike traditional pipelines requiring PointNet++ or Sparse Convolutions, Fase3D directly processes geometric features. The architecture serializes spatial coordinates, passes them through a continuous Fourier transform layer, and dynamically fuses them with textual inputs. This guarantees both permutation invariance and linear scaling with respect to the number of input points.
+              <strong>Why it works:</strong> Unlike traditional pipelines requiring heavy encoders like PointNet++ or Sparse Convolutions, <strong>Fase3D</strong> directly processes geometric features. By serializing spatial coordinates and passing them through a continuous Fourier transform layer, we dynamically fuse geometry with textual inputs. This design guarantees both <em>permutation invariance</em> and <em>linear scaling</em> with respect to the number of input points.
             </p>
           </div>
+
         </div>
       </div>
     </div>
